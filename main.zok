@@ -1,1 +1,33 @@
-https://github.com/YBarsukova/MerkleTrie-ZKP
+import "hashes/sha256/512bitPacked" as sha256packed;
+
+const u32 N = 4;
+
+// Функция для хеширования двух значений
+def MakeHash(field x1, field x2) -> field {
+    return sha256packed([x1, x2, 0, 0])[0];
+}
+
+// Функция для построения дерева Меркла и вычисления корня
+def MerkleTreeDegreeTwoOnly(field[N] arr) -> field {
+    field[N] mut current_level = arr;
+    field[N/2] mut next_level_1 = [0;N/2];
+    field[N/4] mut next_level_2 = [0;N/4];
+
+    // Уровень 1
+    for u32 i in 0..(N/2) {
+        next_level_1[i] = MakeHash(current_level[2 * i], current_level[2 * i + 1]);
+    }
+
+    // Уровень 2
+    for u32 i in 0..(N/4) {
+        next_level_2[i] = MakeHash(next_level_1[2 * i], next_level_1[2 * i + 1]);
+    }
+
+    return next_level_2[0];
+}
+
+// Основная функция
+def main(private field[N] leaves, field root)  {
+    //TODO func that  will equal root and result of MerkleTreeDegreeTwoOnly
+    return;
+}
