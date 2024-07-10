@@ -27,7 +27,10 @@ def MerkleTreeDegreeTwoOnly(field[N] arr) -> field {
 }
 
 // Основная функция
-def main(private field[N] leaves, field root)  {
+def main(private field[N] leaves, field[4] root)-> field  {
     //TODO func that  will equal root and result of MerkleTreeDegreeTwoOnly
-    return;
+    //Change newHash to real value
+    field NewHash=123; 
+    assert(NewHash==MerkleTreeDegreeTwoOnly(leaves));
+    return MerkleTreeDegreeTwoOnly(leaves);
 }
