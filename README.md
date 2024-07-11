@@ -61,20 +61,4 @@ This project demonstrates the creation of a zero-knowledge proof protocol using 
 2. Deploy the smart contracts to the blockchain.
 3. Call the smart contract with the generated proof to verify the knowledge of the data without revealing it.
 
-## Contributing
-
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes.
-4. Submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
-
-## Acknowledgements
-
-- The ZoKrates team for providing an excellent toolkit for zero-knowledge proofs.
-- The Ethereum community for their support and resources.
-
 ---
