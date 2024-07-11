@@ -10,9 +10,12 @@ contract Verifiy{
     uint256 public merlke_root;
     Verifier verifier;
     Verifier.Proof ProofStruct;
-    function SetProof(string calldata s1, string calldata s2, string calldata s3) public 
+    function SetProof(uint[2][2] calldata arrForG1Points, uint[2][2] calldata arrForG2Point) public 
     {
-        //TODO proof creation
+
+        ProofStruct= Verifier.Proof(Pairing.G1Point(arrForG1Points[0][0], arrForG1Points[0][1]),
+                                    Pairing.G2Point(arrForG2Point[0],  arrForG2Point[1]), 
+                                     Pairing.G1Point(arrForG1Points[1][0], arrForG1Points[1][1]));
     }
     function Verify(uint256[4] calldata m_root)public view returns (bool) 
     {
