@@ -1,0 +1,184 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "UserID",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "Success",
+						"type": "bool"
+					}
+				],
+				"name": "AttemptOfVerification",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "UserID",
+						"type": "address"
+					}
+				],
+				"name": "FailVerification",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "UserID",
+						"type": "address"
+					}
+				],
+				"name": "SuccessfullVerification",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2]",
+						"name": "arrForG1Points1",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "arrForG2Points2_1",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "arrForG2Points2_2",
+						"type": "uint256[2]"
+					},
+					{
+						"internalType": "uint256[2]",
+						"name": "arrForG1Points3",
+						"type": "uint256[2]"
+					}
+				],
+				"name": "SetProof",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "UserId",
+						"type": "address"
+					}
+				],
+				"name": "SetUserID",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[4]",
+						"name": "m_root",
+						"type": "uint256[4]"
+					}
+				],
+				"name": "Verify",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_userID",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "merlke_root",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Scontract.sol": "Verifiy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Scontract.sol": {
+			"keccak256": "0x8163c9bc990ca10986fa9f93c1c13c7e507ec789f9a1cdc0d567dfa96a255e33",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://19c053455f6853b2a0da76c5f23e7f6be19e7ae10de01da9f27e18f9470aa43d",
+				"dweb:/ipfs/QmRpULcjb75JD4nmRGh3Ko8yKq9cdAEJLu7kHLbUermqQW"
+			]
+		},
+		"verifier.sol": {
+			"keccak256": "0x8260a1c0179892ab59990c4986d212909420bd750d9cb3d58c0856d5e5ff2ccb",
+			"urls": [
+				"bzz-raw://f6570a336fd7d4edbb5175248b6a463c917f959a6874d1bb760c88606aaa31af",
+				"dweb:/ipfs/QmRLAiKQ2j7GSrdYjZ4qrSHGgcTt9B2wAAVb1pE8ARZ3kX"
+			]
+		}
+	},
+	"version": 1
+}

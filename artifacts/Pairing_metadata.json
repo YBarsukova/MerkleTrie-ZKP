@@ -33,10 +33,10 @@
 	},
 	"sources": {
 		"verifier.sol": {
-			"keccak256": "0xa67d421453d53e24d4642941ececfa61b51c562454c801ebd780557c046ecf1c",
+			"keccak256": "0x3ab67dbd4f04551d644660a4a7a3be4d750b0d3368a4f33833199c34d498768d",
 			"urls": [
-				"bzz-raw://b2515f926e7e22dab733a88dc93a5968dd8d1b79642524542cff594d9de1172b",
-				"dweb:/ipfs/QmVtcL2xy6R3UT2uLez679ktvrvzx9VvgHHfabDE4a27d2"
+				"bzz-raw://9f880f8b10d9d561a9b6232660709b3719a14a5ede3c2bb7c5c68c1b3d721327",
+				"dweb:/ipfs/QmYonAVC3F5ofhbta3SoPnqs343STcGrrH3AF41RvFa8CN"
 			]
 		}
 	},

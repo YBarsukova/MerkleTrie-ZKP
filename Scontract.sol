@@ -1,24 +1,50 @@
-import "verifier.sol";
+
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24 ;
-interface VerifierInterface{
-
- // function verifyTx(Verifier.Proof memory proof, uint[4] memory input) public view returns (bool r);
-}
+import "verifier.sol";
 contract Verifiy{
+    
     uint256 public merlke_root;
+    address public _userID=address(uint160(bytes20("1"))); //default
     Verifier verifier;
-    Verifier.Proof ProofStruct;
-    function SetProof(uint[2][2] calldata arrForG1Points, uint[2][2] calldata arrForG2Point) public 
+    Verifier.Proof public  ProofStruct;
+
+
+    event AttemptOfVerification(address UserID, bool Success);
+
+    event SuccessfullVerification(address UserID);
+    event FailVerification(address UserID);
+
+    constructor() {
+        verifier= new Verifier();
+    }
+    function SetProof(uint[2] calldata arrForG1Points1,
+                    uint[2] calldata arrForG2Points2_1, uint[2] calldata arrForG2Points2_2,
+                    uint[2] calldata arrForG1Points3
+                        ) public 
     {
 
-        ProofStruct= Verifier.Proof(Pairing.G1Point(arrForG1Points[0][0], arrForG1Points[0][1]),
-                                    Pairing.G2Point(arrForG2Point[0],  arrForG2Point[1]), 
-                                     Pairing.G1Point(arrForG1Points[1][0], arrForG1Points[1][1]));
+        ProofStruct= Verifier.Proof(Pairing.G1Point(arrForG1Points1[0], arrForG1Points1[1]),
+                                    Pairing.G2Point(arrForG2Points2_1,  arrForG2Points2_2), 
+                                     Pairing.G1Point(arrForG1Points3[0], arrForG1Points3[1]));
     }
-    function Verify(uint256[4] calldata m_root)public view returns (bool) 
+    function SetUserID(address UserId)  public
     {
-        return verifier.verifyTx(ProofStruct, m_root);
+        _userID=UserId;
+    }
+    function SetMerkleRoot(uint root) private 
+    {
+        merlke_root=root;
+    }
+
+    function Verify(uint[4] calldata m_root)public returns (bool) 
+    {
+        bool result=verifier.verifyTx(ProofStruct, m_root);
+        if (result)
+            emit SuccessfullVerification(_userID);
+        else 
+            emit FailVerification(_userID);
+        return result;
     }
 }

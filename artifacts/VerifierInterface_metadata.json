@@ -1,0 +1,52 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Scontract.sol": "VerifierInterface"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Scontract.sol": {
+			"keccak256": "0x3eda06f200ded7db6b534afb40cddb628750956124ea87a15be5197ceef75453",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://791b763ef357c6bb13e0c0a5c727761ed136d498919f2f7c5c6c5b36588cbeae",
+				"dweb:/ipfs/QmaFYVxVBmABREpGD5kmM9emt1a1Zu3pVsShn1jYDLh97A"
+			]
+		},
+		"verifier.sol": {
+			"keccak256": "0x8260a1c0179892ab59990c4986d212909420bd750d9cb3d58c0856d5e5ff2ccb",
+			"urls": [
+				"bzz-raw://f6570a336fd7d4edbb5175248b6a463c917f959a6874d1bb760c88606aaa31af",
+				"dweb:/ipfs/QmRLAiKQ2j7GSrdYjZ4qrSHGgcTt9B2wAAVb1pE8ARZ3kX"
+			]
+		}
+	},
+	"version": 1
+}
