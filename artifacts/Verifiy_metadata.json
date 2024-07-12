@@ -1,0 +1,103 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2][2]",
+						"name": "arrForG1Points",
+						"type": "uint256[2][2]"
+					},
+					{
+						"internalType": "uint256[2][2]",
+						"name": "arrForG2Point",
+						"type": "uint256[2][2]"
+					}
+				],
+				"name": "SetProof",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[1]",
+						"name": "m_root",
+						"type": "uint256[1]"
+					}
+				],
+				"name": "Verify",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "merlke_root",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"MerkleTrie-ZKP/Scontract.sol": "Verifiy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"/verifier.sol": {
+			"keccak256": "0xfe6650e21b5ae98ad2b0143de0dd3df21497894632cb41bb28fd14d186a8523c",
+			"urls": [
+				"bzz-raw://573067c5a1a03199783f8daa7558661e12c3ea28e4d2f3f5c75ef93bc760ff2e",
+				"dweb:/ipfs/QmbzPChSbqpd3DKTxaDFjV4xHfnsL6EuTquQKpaxMa6WzW"
+			]
+		},
+		"MerkleTrie-ZKP/Scontract.sol": {
+			"keccak256": "0x3c1934730a9020c425aff219ff80e892a4e97a0676efe99ddc3847ac60cd4297",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8cb9766bc510280a3cf92408511bf0b6078a7ff276b75b9f16196ea844c12e76",
+				"dweb:/ipfs/QmYV1nCVkuZnZVxdUfhKLXVwcszztLZ9tGYBijaqKSbTbo"
+			]
+		}
+	},
+	"version": 1
+}

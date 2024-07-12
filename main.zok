@@ -7,6 +7,7 @@ def MakeHash(field x1, field x2) -> field {
     return sha256packed([x1, x2, 0, 0])[0];
 }
 
+
 // Функция для построения дерева Меркла и вычисления корня
 def MerkleTreeDegreeTwoOnly(field[N] arr) -> field {
     field[N] mut current_level = arr;
@@ -27,10 +28,7 @@ def MerkleTreeDegreeTwoOnly(field[N] arr) -> field {
 }
 
 // Основная функция
-def main(private field[N] leaves, field[4] root)  {
-    //TODO func that  will equal root and result of MerkleTreeDegreeTwoOnly
-    //Change newHash to real value
-    field NewHash=123; 
-    //assert(NewHash==MerkleTreeDegreeTwoOnly(leaves));
+def main(private field[N] leaves, field root)  {
+    assert (MerkleTreeDegreeTwoOnly(leaves) == root);
     return;
 }

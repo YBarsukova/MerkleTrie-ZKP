@@ -1,4 +1,4 @@
-import "verifier.sol";
+import "/verifier.sol";
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24 ;
@@ -17,7 +17,7 @@ contract Verifiy{
                                     Pairing.G2Point(arrForG2Point[0],  arrForG2Point[1]), 
                                      Pairing.G1Point(arrForG1Points[1][0], arrForG1Points[1][1]));
     }
-    function Verify(uint256[4] calldata m_root)public view returns (bool) 
+    function Verify(uint256[1] calldata m_root)public view returns (bool) 
     {
         return verifier.verifyTx(ProofStruct, m_root);
     }
